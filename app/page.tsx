@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import TrustSection from "@/components/TrustSection";
 
 export default function Home() {
   return (
@@ -6,17 +7,7 @@ export default function Home() {
       <Hero />
 
       {/* 2. Trust Section */}
-      <section id="trust" className="bg-bg-soft pt-16 pb-12 px-4 sm:px-6 lg:px-8 border-b border-border-subtle min-h-[30vh] flex flex-col justify-center">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-6">Trusted by industry leaders</p>
-          <div className="flex flex-wrap justify-center gap-8 opacity-60">
-            <div className="h-8 w-24 bg-border-subtle rounded"></div>
-            <div className="h-8 w-24 bg-border-subtle rounded"></div>
-            <div className="h-8 w-24 bg-border-subtle rounded"></div>
-            <div className="h-8 w-24 bg-border-subtle rounded"></div>
-          </div>
-        </div>
-      </section>
+      <TrustSection />
 
       {/* 3. Popular Airlines */}
       <section id="popular-airlines" className="py-20 px-4 sm:px-6 lg:px-8">

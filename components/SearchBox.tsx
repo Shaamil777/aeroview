@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function SearchBox() {
   return (
-    <div className="bg-white/10 backdrop-blur-2xl rounded-[2rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] p-6 md:p-8 border border-white/20">
+    <div className="bg-white/10 backdrop-blur-2xl rounded-[2rem] shadow-[0_16px_48px_0_rgba(0,0,0,0.5)] p-6 md:p-8 border border-white/20">
       <div className="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <h2 className="text-2xl font-bold !text-white flex items-center gap-3">
           <Image src="/icons/takeoff.png" alt="Takeoff" width={28} height={28} className="object-contain brightness-0 invert" />
@@ -12,7 +12,7 @@ export default function SearchBox() {
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.642 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.358-.166-2.001A11.954 11.954 0 0110 1.944zM8.707 10.707a1 1 0 00-1.414-1.414l-2 2a1 1 0 101.414 1.414l1.293-1.293 3.293 3.293a1 1 0 001.414-1.414l-4-4z" clipRule="evenodd" />
           </svg>
-          Trusted by thousands of travelers worldwide
+          Explore cabin configurations globally
         </div>
       </div>
       <form className="flex flex-col md:flex-row gap-4 items-stretch justify-center w-full">

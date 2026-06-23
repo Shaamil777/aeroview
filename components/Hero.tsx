@@ -8,12 +8,13 @@ export default function Hero() {
       style={{ backgroundImage: "url('/images/hero.jpg')" }}
     >
       <div className="relative z-10 flex flex-col items-start text-left w-full max-w-5xl px-4 sm:px-6 lg:px-8 mb-12 mt-8">
-        <h1 className="text-5xl md:text-7xl lg:text-[6.5rem] font-black font-heading tracking-tighter !text-white uppercase leading-[0.95] w-full mb-6">
+        <h1 className="text-[2.7rem] md:text-[4.05rem] lg:text-[5.85rem] font-black font-heading tracking-tighter !text-white uppercase leading-[0.95] w-full mb-6">
           <span className="block mb-2 md:mb-4">Fly Smarter.</span>
           <span className="block">Sit Better.</span>
         </h1>
         <p className="text-lg md:text-xl max-w-2xl text-cream opacity-90 font-medium leading-relaxed normal-case tracking-normal font-sans">
-          Accurate aircraft layouts, cabin insights, and seat intelligence for modern travelers.
+          Accurate aircraft layouts, cabin insights,<br />
+          and seat intelligence for modern travelers.
         </p>
       </div>
 
