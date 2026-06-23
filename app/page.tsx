@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import TrustSection from "@/components/TrustSection";
+import PopularAirlines from "@/components/PopularAirlines";
 
 export default function Home() {
   return (
@@ -10,18 +11,8 @@ export default function Home() {
       <TrustSection />
 
       {/* 3. Popular Airlines */}
-      <section id="popular-airlines" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-heading mb-10 text-center">Popular Airlines</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="bg-card border border-border-subtle rounded-xl p-6 h-32 flex items-center justify-center hover:shadow-md transition-shadow">
-                <span className="text-text-secondary font-medium">Airline {i}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PopularAirlines />
+
 
       {/* 4. Popular Aircraft */}
       <section id="popular-aircraft" className="bg-bg-soft py-20 px-4 sm:px-6 lg:px-8">

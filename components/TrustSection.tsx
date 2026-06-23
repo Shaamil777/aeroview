@@ -7,18 +7,22 @@ const trustPoints = [
   {
     title: "Worldwide Aircraft Data",
     description: "Explore cabin layouts from airlines worldwide.",
+    icon: "/icons/worldwide.png"
   },
   {
     title: "Verified Cabin Details",
     description: "Reliable seating and aircraft information.",
+    icon: "/icons/verify.png"
   },
   {
     title: "1,000+ Configurations",
     description: "Compare layouts across aircraft variants.",
+    icon: "/icons/seat.png"
   },
   {
     title: "Regularly Updated",
     description: "Continuously reviewed and refreshed.",
+    icon: "/icons/refresh.png"
   },
 ];
 
@@ -60,19 +64,34 @@ export default function TrustSection() {
     >
      
 
-      <div className="max-w-7xl mx-auto relative z-20 w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-[85rem] mx-auto relative z-20 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">
           {trustPoints.map((point, index) => (
             <div 
               key={index} 
-              className={`flex flex-col border-l-2 border-aviation pl-4 py-1 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
+              className={`flex items-center gap-4 ${
+                index !== 0 ? 'lg:border-l lg:border-border-subtle lg:pl-6' : ''
+              } ${
+                index !== trustPoints.length - 1 ? 'lg:pr-6' : ''
+              } ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
               style={{ 
                 animationDelay: isVisible ? `${1.5 + (index * 0.2)}s` : '0s',
                 animationFillMode: 'forwards'
               }}
             >
-              <h3 className="font-semibold text-heading text-sm uppercase tracking-wide">{point.title}</h3>
-              <p className="text-xs text-text-secondary leading-relaxed mt-1.5">{point.description}</p>
+              <div className="flex-shrink-0 w-[52px] h-[52px] bg-[#E5F1FF] rounded-full flex items-center justify-center">
+                <Image 
+                  src={point.icon} 
+                  alt={point.title} 
+                  width={28} 
+                  height={28} 
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col">
+                <h3 className="font-semibold text-heading text-sm">{point.title}</h3>
+                <p className="text-xs text-text-secondary leading-relaxed mt-0.5">{point.description}</p>
+              </div>
             </div>
           ))}
         </div>
