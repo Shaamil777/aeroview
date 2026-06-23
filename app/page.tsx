@@ -1,65 +1,144 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex flex-col w-full">
+      {/* 1. Hero / Search Section */}
+      <section id="hero" className="bg-navy text-cream py-24 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6">Find Your Perfect Flight</h1>
+        <p className="text-xl mb-10 max-w-2xl text-bg-soft">Experience aviation like never before with AeroView.</p>
+        <div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-xl">
+          {/* Dummy Search Box */}
+          <div className="h-16 border-2 border-dashed border-border-subtle rounded flex items-center justify-center text-text-secondary">
+            Search Component Placeholder
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* 2. Trust Section */}
+      <section id="trust" className="bg-bg-soft py-12 px-4 sm:px-6 lg:px-8 border-b border-border-subtle">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-6">Trusted by industry leaders</p>
+          <div className="flex flex-wrap justify-center gap-8 opacity-60">
+            <div className="h-8 w-24 bg-border-subtle rounded"></div>
+            <div className="h-8 w-24 bg-border-subtle rounded"></div>
+            <div className="h-8 w-24 bg-border-subtle rounded"></div>
+            <div className="h-8 w-24 bg-border-subtle rounded"></div>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* 3. Popular Airlines */}
+      <section id="popular-airlines" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-heading mb-10 text-center">Popular Airlines</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="bg-card border border-border-subtle rounded-xl p-6 h-32 flex items-center justify-center hover:shadow-md transition-shadow">
+                <span className="text-text-secondary font-medium">Airline {i}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Popular Aircraft */}
+      <section id="popular-aircraft" className="bg-bg-soft py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-heading mb-10 text-center">Popular Aircraft</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="bg-card border border-border-subtle rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-48 bg-border-subtle flex items-center justify-center text-text-secondary">Image Placeholder</div>
+                <div className="p-6">
+                  <h3 className="font-bold text-lg mb-2 text-heading">Aircraft Model {i}</h3>
+                  <p className="text-text-secondary text-sm">Brief description of the aircraft specifications and comfort features.</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Why Choose Us / Features */}
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-heading mb-16 text-center">Why Choose AeroView</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="text-center">
+                <div className="w-16 h-16 mx-auto bg-teal/20 text-teal rounded-full flex items-center justify-center mb-6">
+                  <span className="text-sm">Icon</span>
+                </div>
+                <h3 className="font-bold text-xl mb-4 text-heading">Feature {i}</h3>
+                <p className="text-text-secondary">Highlighting the specific benefits and premium experience of choosing our platform.</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. How it works */}
+      <section id="how-it-works" className="bg-navy text-cream py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold mb-16 text-center">How It Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="relative">
+                <div className="w-12 h-12 mx-auto bg-aviation text-navy font-bold rounded-full flex items-center justify-center mb-6 text-xl">
+                  {i}
+                </div>
+                <h3 className="font-bold text-xl mb-3">Step {i}</h3>
+                <p className="text-bg-soft text-sm">Clear description of this step in the user journey.</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. About */}
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          <div className="md:w-1/2 w-full">
+            <div className="aspect-video bg-border-subtle rounded-xl flex items-center justify-center text-text-secondary">
+              About Us Image
+            </div>
+          </div>
+          <div className="md:w-1/2 w-full">
+            <h2 className="text-3xl font-bold text-heading mb-6">About AeroView</h2>
+            <p className="text-text-secondary mb-6 leading-relaxed">
+              We are dedicated to revolutionizing how you experience flight. Our platform connects you with the best airlines and aircraft to ensure your journey is as seamless as your destination.
+            </p>
+            <button className="px-6 py-3 bg-aviation text-navy font-medium rounded-lg hover:bg-aviation/90 transition-colors">
+              Read Our Story
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. FAQ */}
+      <section id="faq" className="bg-bg-soft py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-heading mb-10 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="bg-card border border-border-subtle rounded-lg p-6">
+                <h3 className="font-bold text-heading mb-2">Question {i}?</h3>
+                <p className="text-text-secondary text-sm">Detailed answer to the frequently asked question goes here.</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. CTA */}
+      <section id="cta" className="bg-aviation py-20 px-4 sm:px-6 lg:px-8 text-center text-navy">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-6">Ready to take off?</h2>
+          <p className="text-xl mb-10 opacity-90">Join thousands of travelers who trust AeroView for their journey.</p>
+          <button className="px-8 py-4 bg-navy text-white font-bold rounded-lg hover:bg-navy/90 transition-colors shadow-lg">
+            Get Started Now
+          </button>
+        </div>
+      </section>
     </div>
   );
 }
