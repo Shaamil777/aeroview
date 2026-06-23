@@ -1,20 +1,12 @@
+import Hero from "@/components/Hero";
+
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
-      {/* 1. Hero / Search Section */}
-      <section id="hero" className="bg-navy text-cream py-24 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6">Find Your Perfect Flight</h1>
-        <p className="text-xl mb-10 max-w-2xl text-bg-soft">Experience aviation like never before with AeroView.</p>
-        <div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-xl">
-          {/* Dummy Search Box */}
-          <div className="h-16 border-2 border-dashed border-border-subtle rounded flex items-center justify-center text-text-secondary">
-            Search Component Placeholder
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* 2. Trust Section */}
-      <section id="trust" className="bg-bg-soft py-12 px-4 sm:px-6 lg:px-8 border-b border-border-subtle">
+      <section id="trust" className="bg-bg-soft pt-16 pb-12 px-4 sm:px-6 lg:px-8 border-b border-border-subtle min-h-[30vh] flex flex-col justify-center">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-6">Trusted by industry leaders</p>
           <div className="flex flex-wrap justify-center gap-8 opacity-60">

@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-navy text-cream py-8 mt-auto">
+    <footer className="bg-cream text-navy py-8 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0">
           <span className="text-xl font-bold text-aviation">AeroView</span>
