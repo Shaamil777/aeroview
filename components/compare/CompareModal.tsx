@@ -17,12 +17,12 @@ export default function CompareModal({ selectedAircraft, onClose }: CompareModal
   const bestPitch = Math.max(...selectedAircraft.map(a => parseFloat(a.seatPitch)));
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 md:p-6">
       <div className="absolute inset-0 bg-navy/80 backdrop-blur-sm" onClick={onClose} />
-      <div className="bg-white rounded-3xl shadow-2xl w-full max-w-[1400px] max-h-[95vh] flex flex-col relative z-10 overflow-hidden">
-        <div className="flex items-center justify-between p-6 md:p-8 border-b border-border-subtle bg-[#F8FAFC]">
+      <div className="bg-white rounded-none sm:rounded-3xl shadow-2xl w-full max-w-[1400px] max-h-[100vh] sm:max-h-[95vh] flex flex-col relative z-10 overflow-hidden">
+        <div className="flex items-center justify-between p-4 sm:p-6 md:p-8 border-b border-border-subtle bg-[#F8FAFC]">
           <div>
-            <h3 className="text-3xl font-bold text-navy font-heading">Aircraft Comparison</h3>
+            <h3 className="text-xl sm:text-3xl font-bold text-navy font-heading">Aircraft Comparison</h3>
             <p className="text-text-secondary text-sm mt-1">Detailed specifications and comfort metrics</p>
           </div>
           <button 
@@ -33,7 +33,7 @@ export default function CompareModal({ selectedAircraft, onClose }: CompareModal
           </button>
         </div>
 
-        <div className="overflow-y-auto p-6 md:p-8 custom-scrollbar bg-white">
+        <div className="overflow-y-auto p-4 sm:p-6 md:p-8 custom-scrollbar bg-white">
           <div className="grid grid-cols-[minmax(180px,220px)_repeat(auto-fit,minmax(280px,1fr))] gap-6">
 
             <div className="hidden md:flex flex-col gap-0 pt-[140px]">

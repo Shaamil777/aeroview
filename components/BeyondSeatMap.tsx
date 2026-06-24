@@ -19,20 +19,20 @@ import Image from "next/image";
 
 export default function BeyondSeatMap() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white text-heading">
+    <section className="py-14 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white text-heading">
       <div className="max-w-[90rem] mx-auto">
-        <div className="flex flex-col lg:flex-row gap-8 mb-12">
+        <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 mb-12">
 
-          <div className="w-full lg:w-[35%] flex flex-col gap-8">
+          <div className="w-full lg:w-[35%] flex flex-col gap-6 sm:gap-8">
             
             <div className="flex flex-col">
               <span className="text-aviation font-bold text-sm tracking-widest uppercase mb-4">
                 Beyond The Seat Map
               </span>
-              <h2 className="text-4xl lg:text-5xl font-extrabold text-[#0A2540] mb-6 leading-tight">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0A2540] mb-4 sm:mb-6 leading-tight">
                 Everything Behind <br /> Your Flight
               </h2>
-              <p className="text-text-secondary text-lg leading-relaxed mb-8">
+              <p className="text-text-secondary text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
                 Powerful tools and detailed insights to help you explore aircraft cabins, compare configurations, and find the best seats for your journey.
               </p>
 
@@ -62,7 +62,7 @@ export default function BeyondSeatMap() {
               </div>
             </div>
 
-            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden group cursor-pointer shadow-lg mt-auto">
+            <div className="relative w-full aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden group cursor-pointer shadow-lg mt-auto hidden sm:block">
               <Image
                 src="/images/hero.jpg"
                 alt="Aircraft Wing"
@@ -86,9 +86,9 @@ export default function BeyondSeatMap() {
             </div>
           </div>
 
-          <div className="w-full lg:w-[65%] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div className="w-full lg:w-[65%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
 
-            <div className="bg-white border border-border-subtle rounded-3xl p-6 flex flex-col hover:shadow-xl transition-shadow duration-300 group">
+            <div className="bg-white border border-border-subtle rounded-2xl sm:rounded-3xl p-4 sm:p-6 flex flex-col hover:shadow-xl transition-shadow duration-300 group">
               <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
                 <Move className="w-6 h-6 text-blue-500" />
               </div>
@@ -112,7 +112,7 @@ export default function BeyondSeatMap() {
               </div>
             </div>
 
-            <div className="bg-white border border-border-subtle rounded-3xl p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white border border-border-subtle rounded-2xl sm:rounded-3xl p-4 sm:p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mb-5">
                 <Zap className="w-6 h-6 text-green-500 fill-current" />
               </div>
@@ -141,7 +141,7 @@ export default function BeyondSeatMap() {
               </div>
             </div>
 
-            <div className="bg-white border border-border-subtle rounded-3xl p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white border border-border-subtle rounded-2xl sm:rounded-3xl p-4 sm:p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center mb-5">
                 <BarChart2 className="w-6 h-6 text-purple-600" />
               </div>
@@ -166,7 +166,7 @@ export default function BeyondSeatMap() {
               </div>
             </div>
 
-            <div className="bg-white border border-border-subtle rounded-3xl p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white border border-border-subtle rounded-2xl sm:rounded-3xl p-4 sm:p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center mb-5">
                 <ArrowRightLeft className="w-6 h-6 text-amber-600" />
               </div>
@@ -198,7 +198,7 @@ export default function BeyondSeatMap() {
               </div>
             </div>
 
-            <div className="bg-white border border-border-subtle rounded-3xl p-6 flex flex-col hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+            <div className="bg-white border border-border-subtle rounded-2xl sm:rounded-3xl p-4 sm:p-6 flex flex-col hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
               <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5 relative z-10">
                 <Globe className="w-6 h-6 text-blue-600" />
               </div>
@@ -220,7 +220,7 @@ export default function BeyondSeatMap() {
               </div>
             </div>
 
-            <div className="bg-white border border-border-subtle rounded-3xl p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white border border-border-subtle rounded-2xl sm:rounded-3xl p-4 sm:p-6 flex flex-col hover:shadow-xl transition-shadow duration-300">
               <div className="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center mb-5">
                 <RefreshCw className="w-6 h-6 text-red-500" />
               </div>

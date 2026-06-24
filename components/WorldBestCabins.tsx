@@ -60,11 +60,11 @@ export default function WorldBestCabins() {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-bg-soft overflow-hidden">
+    <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-bg-soft overflow-hidden">
       <div className="max-w-[90rem] mx-auto relative">
-        <div className="flex justify-between items-end mb-10">
+        <div className="flex justify-between items-end mb-6 sm:mb-10">
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#0A2540]">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A2540]">
               Step inside world&apos;s best cabins
             </h2>
           </div>
@@ -96,10 +96,10 @@ export default function WorldBestCabins() {
             {cabins.map((cabin) => (
               <div
                 key={cabin.id}
-                className="min-w-[280px] md:min-w-[320px] lg:min-w-[340px] flex-shrink-0 snap-start bg-white rounded-3xl border border-border-subtle overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
+                className="min-w-[240px] sm:min-w-[280px] md:min-w-[320px] lg:min-w-[340px] flex-shrink-0 snap-start bg-white rounded-2xl sm:rounded-3xl border border-border-subtle overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
               >
                 
-                <div className="relative h-40 md:h-48 w-full overflow-hidden">
+                <div className="relative h-32 sm:h-40 md:h-48 w-full overflow-hidden">
                   <Image
                     src={cabin.image}
                     alt={`${cabin.airline} ${cabin.aircraft} Cabin`}
@@ -115,7 +115,7 @@ export default function WorldBestCabins() {
                   </div>
                 </div>
 
-                <div className="p-5 flex items-center justify-between">
+                <div className="p-3 sm:p-5 flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     
                     <div className="w-10 h-10 rounded-full border border-gray-100 overflow-hidden bg-white flex-shrink-0 shadow-sm relative">

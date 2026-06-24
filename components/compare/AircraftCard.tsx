@@ -34,7 +34,7 @@ export default function AircraftCard({ aircraft, isSelected, activeTab, onToggle
         )}
       </div>
 
-      <div className="h-48 relative overflow-hidden bg-slate-100">
+      <div className="h-32 sm:h-48 relative overflow-hidden bg-slate-100">
         <img 
           src={aircraft.image} 
           alt={aircraft.name}
@@ -62,28 +62,28 @@ export default function AircraftCard({ aircraft, isSelected, activeTab, onToggle
           )}
         </div>
       </div>
-      <div className="p-5">
-        <h3 className="text-xl font-bold text-navy mb-1">{aircraft.name}</h3>
-        <p className="text-sm text-text-secondary mb-4 flex items-center gap-1">
+      <div className="p-3 sm:p-5">
+        <h3 className="text-sm sm:text-xl font-bold text-navy mb-1">{aircraft.name}</h3>
+        <p className="text-[10px] sm:text-sm text-text-secondary mb-3 sm:mb-4 flex items-center gap-1 leading-tight">
           {activeTab !== 'Airlines' && <span>{aircraft.airline} • </span>}
           {aircraft.aircraftType}
         </p>
         
-        <div className="grid grid-cols-2 gap-y-4 mb-5 text-sm">
+        <div className="grid grid-cols-2 gap-y-2 sm:gap-y-4 mb-3 sm:mb-5 text-sm">
           <div>
-            <p className="text-text-secondary text-[10px] uppercase tracking-wider font-bold mb-0.5">Total Seats</p>
-            <p className="font-semibold text-navy">{aircraft.totalSeats}</p>
+            <p className="text-text-secondary text-[8px] sm:text-[10px] uppercase tracking-wider font-bold mb-0.5">Total Seats</p>
+            <p className="font-semibold text-navy text-xs sm:text-sm">{aircraft.totalSeats}</p>
           </div>
           <div>
-            <p className="text-text-secondary text-[10px] uppercase tracking-wider font-bold mb-0.5">Cabin Classes</p>
-            <p className="font-semibold text-navy">{aircraft.cabinClasses}</p>
+            <p className="text-text-secondary text-[8px] sm:text-[10px] uppercase tracking-wider font-bold mb-0.5">Cabin Classes</p>
+            <p className="font-semibold text-navy text-xs sm:text-sm">{aircraft.cabinClasses}</p>
           </div>
           <div>
-            <p className="text-text-secondary text-[10px] uppercase tracking-wider font-bold mb-0.5">Layout Variants</p>
-            <p className="font-semibold text-navy">{aircraft.layoutVariants}</p>
+            <p className="text-text-secondary text-[8px] sm:text-[10px] uppercase tracking-wider font-bold mb-0.5">Layout Variants</p>
+            <p className="font-semibold text-navy text-xs sm:text-sm">{aircraft.layoutVariants}</p>
           </div>
           <div>
-            <p className="text-text-secondary text-[10px] uppercase tracking-wider font-bold mb-0.5">Comfort Score</p>
+            <p className="text-text-secondary text-[8px] sm:text-[10px] uppercase tracking-wider font-bold mb-0.5">Comfort Score</p>
             <p className="font-bold text-aviation flex items-center gap-1">
               <Star className="w-3.5 h-3.5 fill-aviation" />
               {aircraft.comfortScore}/10
@@ -91,7 +91,7 @@ export default function AircraftCard({ aircraft, isSelected, activeTab, onToggle
           </div>
         </div>
 
-        <div className={`w-full py-2.5 rounded-xl flex items-center justify-center gap-2 text-sm font-bold transition-all ${
+        <div className={`w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl flex items-center justify-center gap-1 sm:gap-2 text-[10px] sm:text-sm font-bold transition-all ${
           isSelected 
             ? 'bg-aviation/5 text-aviation border border-aviation/20' 
             : 'bg-[#F8FAFC] text-text-secondary border border-border-subtle group-hover:bg-white group-hover:border-aviation/30 group-hover:text-aviation'

@@ -15,8 +15,8 @@ export default function CompareTray({ selectedAircraft, onClear, onRemove, onCom
   if (selectedAircraft.length === 0) return null;
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-white border border-border-subtle rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] z-40 transform transition-all duration-300 w-[95%] max-w-4xl px-4 py-3">
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 bg-white border border-border-subtle rounded-xl sm:rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] z-40 transform transition-all duration-300 w-[95%] max-w-4xl px-3 sm:px-4 py-2 sm:py-3">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
         <div className="flex items-center gap-4 overflow-x-auto pb-1 sm:pb-0 hide-scrollbar w-full sm:w-auto">
           <div className="flex flex-col justify-center">
             <span className="text-xs font-bold text-text-secondary uppercase tracking-wider">Compare</span>

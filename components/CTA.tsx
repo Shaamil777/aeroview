@@ -5,8 +5,8 @@ import { ArrowRight, Plane } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="pt-12 pb-24 px-4 sm:px-6 lg:px-8 bg-white flex justify-center">
-      <div className="max-w-[85rem] w-full relative bg-[#F4F7FF] rounded-[2rem] overflow-hidden flex flex-col md:flex-row items-center justify-between border border-blue-50/50 shadow-sm">
+    <section className="pt-8 sm:pt-12 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 bg-white flex justify-center">
+      <div className="max-w-[85rem] w-full relative bg-[#F4F7FF] rounded-2xl sm:rounded-[2rem] overflow-hidden flex flex-col md:flex-row items-center justify-between border border-blue-50/50 shadow-sm">
 
         <div className="absolute left-0 top-0 bottom-0 w-1/3 pointer-events-none hidden md:block">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#F4F7FF] z-10" />
@@ -48,11 +48,11 @@ export default function CTA() {
           </svg>
         </div>
 
-        <div className="relative z-20 flex flex-col items-center justify-center text-center py-16 px-8 md:px-0 mx-auto max-w-2xl">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0A2540] mb-4">
+        <div className="relative z-20 flex flex-col items-center justify-center text-center py-10 sm:py-16 px-6 sm:px-8 md:px-0 mx-auto max-w-2xl">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#0A2540] mb-3 sm:mb-4">
             Ready to take off?
           </h2>
-          <p className="text-text-secondary text-lg mb-8 max-w-md mx-auto">
+          <p className="text-text-secondary text-sm sm:text-lg mb-6 sm:mb-8 max-w-md mx-auto">
             Explore aircraft, compare layouts and find the best seats for your next journey.
           </p>
           <button className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">

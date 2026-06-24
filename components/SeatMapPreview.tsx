@@ -4,12 +4,12 @@ import AircraftSpecCard from "@/components/seatmap/AircraftSpecCard";
 export default function SeatMapPreview() {
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#F8FAFC]">
-      <div className="max-w-[85rem] mx-auto bg-[#F4F7FB] rounded-3xl p-8 md:p-12">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+      <div className="max-w-[85rem] mx-auto bg-[#F4F7FB] rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12">
+        <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-12">
 
           <div className="lg:w-[18%] w-full">
             <h4 className="text-blue-600 font-bold text-xs tracking-wider uppercase mb-2">Explore Cabin Layouts</h4>
-            <h2 className="text-2xl font-bold text-navy mb-3">Interactive Seat Map Preview</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-navy mb-3">Interactive Seat Map Preview</h2>
             <p className="text-text-secondary text-sm mb-6 leading-relaxed">
               Explore real layouts and find your perfect seat.
             </p>

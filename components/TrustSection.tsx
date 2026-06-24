@@ -60,15 +60,15 @@ export default function TrustSection() {
     <section 
       id="trust" 
       ref={sectionRef}
-      className="relative bg-bg-soft py-14 px-4 sm:px-6 lg:px-8 border-b border-border-subtle overflow-hidden shadow-inner"
+      className="relative bg-bg-soft py-10 sm:py-14 px-4 sm:px-6 lg:px-8 border-b border-border-subtle overflow-hidden shadow-inner"
     >
 
       <div className="max-w-[85rem] mx-auto relative z-20 w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-0">
           {trustPoints.map((point, index) => (
             <div 
               key={index} 
-              className={`flex items-center gap-4 ${
+              className={`flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 ${
                 index !== 0 ? 'lg:border-l lg:border-border-subtle lg:pl-6' : ''
               } ${
                 index !== trustPoints.length - 1 ? 'lg:pr-6' : ''
@@ -78,18 +78,18 @@ export default function TrustSection() {
                 animationFillMode: 'forwards'
               }}
             >
-              <div className="flex-shrink-0 w-[52px] h-[52px] bg-[#E5F1FF] rounded-full flex items-center justify-center">
+              <div className="flex-shrink-0 w-10 h-10 sm:w-[52px] sm:h-[52px] bg-[#E5F1FF] rounded-full flex items-center justify-center">
                 <Image 
                   src={point.icon} 
                   alt={point.title} 
                   width={28} 
                   height={28} 
-                  className="object-contain"
+                  className="object-contain w-5 h-5 sm:w-7 sm:h-7"
                 />
               </div>
               <div className="flex flex-col">
-                <h3 className="font-semibold text-heading text-sm">{point.title}</h3>
-                <p className="text-xs text-text-secondary leading-relaxed mt-0.5">{point.description}</p>
+                <h3 className="font-semibold text-heading text-[11px] sm:text-sm leading-tight">{point.title}</h3>
+                <p className="text-[10px] sm:text-xs text-text-secondary leading-relaxed mt-0.5 hidden sm:block">{point.description}</p>
               </div>
             </div>
           ))}

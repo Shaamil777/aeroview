@@ -48,22 +48,22 @@ export default function Compare() {
   });
 
   return (
-    <section className="py-20 bg-[#F8FAFC] relative">
+    <section className="py-12 sm:py-20 bg-[#F8FAFC] relative">
       <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy font-heading mb-4">Compare Aircraft & Cabin Configurations</h2>
-          <p className="text-lg text-text-secondary max-w-3xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-navy font-heading mb-3 sm:mb-4">Compare Aircraft & Cabin Configurations</h2>
+          <p className="text-sm sm:text-lg text-text-secondary max-w-3xl mx-auto px-2">
             Compare cabin configurations across airlines, aircraft families, and popular routes to identify the most comfortable option before booking.
           </p>
         </div>
 
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-6 sm:mb-8">
           <div className="inline-flex bg-white border border-border-subtle p-1.5 rounded-full shadow-sm">
             {tabs.map(tab => (
               <button
                 key={tab}
                 onClick={() => handleTabChange(tab)}
-                className={`px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
+                className={`px-5 sm:px-8 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 ${
                   activeTab === tab 
                     ? 'bg-navy text-white shadow-md' 
                     : 'text-text-secondary hover:text-navy hover:bg-gray-50'
@@ -75,12 +75,12 @@ export default function Compare() {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
           {filters[activeTab].map(filter => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-colors border ${
+              className={`px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-colors border ${
                 activeFilter === filter
                   ? 'bg-navy text-white border-navy'
                   : 'bg-white text-text-secondary border-border-subtle hover:border-navy/30 hover:text-navy hover:bg-gray-50'
@@ -91,7 +91,7 @@ export default function Compare() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {filteredData.map(aircraft => (
             <AircraftCard
               key={aircraft.id}

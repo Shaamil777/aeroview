@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function SearchBox() {
   return (
-    <div className="bg-white/10 backdrop-blur-2xl rounded-[2rem] shadow-[0_16px_48px_0_rgba(0,0,0,0.5)] p-6 md:p-8 border border-white/20">
-      <div className="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <h2 className="text-2xl font-bold !text-white flex items-center gap-3">
+    <div className="bg-white/10 backdrop-blur-2xl rounded-2xl sm:rounded-[2rem] shadow-[0_16px_48px_0_rgba(0,0,0,0.5)] p-4 sm:p-6 md:p-8 border border-white/20">
+      <div className="mb-4 sm:mb-6 flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
+        <h2 className="text-lg sm:text-2xl font-bold !text-white flex items-center gap-2 sm:gap-3">
           <Image src="/icons/takeoff.png" alt="Takeoff" width={28} height={28} className="object-contain brightness-0 invert" />
           Search Flights, Airlines & Aircraft
         </h2>
@@ -15,8 +15,8 @@ export default function SearchBox() {
           Explore cabin configurations globally
         </div>
       </div>
-      <form className="flex flex-col md:flex-row gap-4 items-stretch justify-center w-full">
-        <div className="flex-1 w-full bg-white/5 backdrop-blur-md rounded-2xl shadow-inner border border-white/10 focus-within:border-white/30 focus-within:bg-white/10 transition-all hover:-translate-y-0.5 duration-200 flex flex-col md:flex-row">
+      <form className="flex flex-col md:flex-row gap-3 sm:gap-4 items-stretch justify-center w-full">
+        <div className="flex-1 w-full bg-white/5 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-inner border border-white/10 focus-within:border-white/30 focus-within:bg-white/10 transition-all hover:-translate-y-0.5 duration-200 flex flex-col md:flex-row">
           <div className="relative flex-1 px-5 pt-6 pb-2 group">
             <input type="text" id="flight-number" placeholder="e.g. EK203" className="peer w-full bg-transparent p-0 border-none outline-none text-white focus:ring-0 font-medium text-sm md:text-base placeholder:text-white/40 transition-colors" />
             <label htmlFor="flight-number" className="absolute left-5 top-3 text-[10px] font-bold text-white/60 uppercase tracking-wider transition-all duration-200 pointer-events-none peer-focus:text-white">
@@ -52,11 +52,11 @@ export default function SearchBox() {
         </div>
       </form>
 
-      <div className="mt-6 flex flex-col md:flex-row items-start md:items-center gap-3 text-sm">
+      <div className="mt-4 sm:mt-6 flex flex-col md:flex-row items-start md:items-center gap-2 sm:gap-3 text-sm">
         <span className="text-white/60 font-medium">Popular searches:</span>
-        <div className="flex flex-wrap gap-2">
-          {['✈ EK203', '✈ Emirates A380', '✈ Qatar A350', '✈ Boeing 787-9', '✈ Air India A320neo'].map((search) => (
-            <button key={search} className="px-3 py-1.5 rounded-full border border-white/10 text-white/80 hover:bg-white/10 hover:text-white hover:border-white/30 transition-all">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
+          {['✈ EK203', '✈ Emirates A380', '✈ Qatar A350', '✈ Boeing 787-9'].map((search) => (
+            <button key={search} className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-white/10 text-white/80 hover:bg-white/10 hover:text-white hover:border-white/30 transition-all text-xs sm:text-sm">
               {search}
             </button>
           ))}
