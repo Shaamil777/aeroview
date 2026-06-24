@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import TrustSection from "@/components/TrustSection";
 import PopularAirlines from "@/components/PopularAirlines";
+import SeatMapPreview from "@/components/SeatMapPreview";
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
       {/* 3. Popular Airlines */}
       <PopularAirlines />
 
+      {/* Seat Map Preview */}
+      <SeatMapPreview />
 
       {/* 4. Popular Aircraft */}
       <section id="popular-aircraft" className="bg-bg-soft py-20 px-4 sm:px-6 lg:px-8">
