@@ -1,0 +1,22 @@
+export type Aircraft = {
+  id: string;
+  name: string;
+  airline: string;
+  totalSeats: number;
+  cabinClasses: number;
+  layoutVariants: number;
+  manufacturer: string;
+  aircraftFamily: string;
+  aircraftType: string;
+  businessSeats: number;
+  premiumEconomySeats: number;
+  economySeats: number;
+  seatWidth: string;
+  seatPitch: string;
+  comfortScore: number;
+  windowAlignment: string;
+  extraLegroom: boolean;
+  operatingAirlines: number;
+  image: string;
+  route: string;
+};

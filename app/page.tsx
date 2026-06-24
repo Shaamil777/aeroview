@@ -2,7 +2,7 @@ import Hero from "@/components/Hero";
 import TrustSection from "@/components/TrustSection";
 import PopularAirlines from "@/components/PopularAirlines";
 import SeatMapPreview from "@/components/SeatMapPreview";
-import PopularAircraft from "@/components/PopularAircraft";
+import PopularAircraft from "@/components/Compare";
 
 export default function Home() {
   return (
