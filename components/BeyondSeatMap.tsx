@@ -5,14 +5,11 @@ import {
   BarChart2,
   Globe,
   RefreshCw,
-  Plane,
-  Users,
   Search,
   CheckCircle2,
   Play,
   ArrowRightLeft,
   Move,
-  Building,
   Star
 } from "lucide-react";
 import Image from "next/image";

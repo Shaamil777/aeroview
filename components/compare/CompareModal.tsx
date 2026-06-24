@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from 'react';
@@ -17,9 +18,9 @@ export default function CompareModal({ selectedAircraft, onClose }: CompareModal
   const bestPitch = Math.max(...selectedAircraft.map(a => parseFloat(a.seatPitch)));
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 md:p-6">
-      <div className="absolute inset-0 bg-navy/80 backdrop-blur-sm" onClick={onClose} />
-      <div className="bg-white rounded-none sm:rounded-3xl shadow-2xl w-full max-w-[1400px] max-h-[100vh] sm:max-h-[95vh] flex flex-col relative z-10 overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8">
+      <div className="absolute inset-0 bg-black/50" onClick={onClose} />
+      <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-[1400px] max-h-[90vh] flex flex-col relative z-10 overflow-hidden">
         <div className="flex items-center justify-between p-4 sm:p-6 md:p-8 border-b border-border-subtle bg-[#F8FAFC]">
           <div>
             <h3 className="text-xl sm:text-3xl font-bold text-navy font-heading">Aircraft Comparison</h3>
