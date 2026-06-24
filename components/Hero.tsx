@@ -4,10 +4,10 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-navy text-cream pt-24 pb-8 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center bg-cover bg-center min-h-[65vh]"
+      className="relative bg-navy text-cream pt-24 pb-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center bg-cover bg-center flex-1 w-full"
       style={{ backgroundImage: "url('/images/hero.jpg')" }}
     >
-      <div className="relative z-10 flex flex-col items-start text-left w-full max-w-5xl px-4 sm:px-6 lg:px-8 mb-12 mt-8">
+      <div className="relative z-10 flex flex-col items-start text-left w-full max-w-5xl px-4 sm:px-6 lg:px-8 mb-12 mt-12">
         <h1 className="text-[2.7rem] md:text-[4.05rem] lg:text-[5.85rem] font-black font-heading tracking-tighter !text-white uppercase leading-[0.95] w-full mb-6">
           <span className="block mb-2 md:mb-4">Fly Smarter.</span>
           <span className="block">Sit Better.</span>

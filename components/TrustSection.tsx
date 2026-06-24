@@ -60,7 +60,7 @@ export default function TrustSection() {
     <section 
       id="trust" 
       ref={sectionRef}
-      className="relative bg-bg-soft py-10 px-4 sm:px-6 lg:px-8 border-b border-border-subtle overflow-hidden shadow-inner"
+      className="relative bg-bg-soft py-14 px-4 sm:px-6 lg:px-8 border-b border-border-subtle overflow-hidden shadow-inner"
     >
 
       <div className="max-w-[85rem] mx-auto relative z-20 w-full">
