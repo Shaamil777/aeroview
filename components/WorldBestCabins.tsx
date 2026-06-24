@@ -68,17 +68,17 @@ export default function WorldBestCabins() {
               Step inside world's best cabins
             </h2>
           </div>
-          
+
           {/* Navigation Buttons (Desktop) */}
           <div className="hidden md:flex items-center gap-3">
-            <button 
+            <button
               onClick={() => scroll('left')}
               className="w-12 h-12 rounded-full bg-white border border-border-subtle flex items-center justify-center shadow-sm hover:shadow-md transition-shadow text-[#0A2540]"
               aria-label="Scroll left"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <button 
+            <button
               onClick={() => scroll('right')}
               className="w-12 h-12 rounded-full bg-white border border-border-subtle flex items-center justify-center shadow-sm hover:shadow-md transition-shadow text-[#0A2540]"
               aria-label="Scroll right"
@@ -90,19 +90,19 @@ export default function WorldBestCabins() {
 
         {/* Carousel Container */}
         <div className="relative -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-          <div 
+          <div
             ref={scrollRef}
             className="flex gap-6 overflow-x-auto pb-8 pt-4 snap-x snap-mandatory scrollbar-hide"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {cabins.map((cabin) => (
-              <div 
-                key={cabin.id} 
+              <div
+                key={cabin.id}
                 className="min-w-[280px] md:min-w-[320px] lg:min-w-[340px] flex-shrink-0 snap-start bg-white rounded-3xl border border-border-subtle overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
               >
                 {/* Image Section */}
                 <div className="relative h-40 md:h-48 w-full overflow-hidden">
-                  <Image 
+                  <Image
                     src={cabin.image}
                     alt={`${cabin.airline} ${cabin.aircraft} Cabin`}
                     fill
@@ -110,7 +110,7 @@ export default function WorldBestCabins() {
                   />
                   {/* Overlay Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  
+
                   {/* 360 Badge */}
                   <div className="absolute top-3 left-3 w-10 h-10 bg-black/60 backdrop-blur-md rounded-full flex flex-col items-center justify-center text-white border border-white/20 shadow-lg group-hover:scale-110 transition-transform">
                     <span className="text-[9px] font-bold leading-none mb-0.5 mt-1">360°</span>
@@ -123,18 +123,18 @@ export default function WorldBestCabins() {
                   <div className="flex items-center gap-3">
                     {/* Airline Logo */}
                     <div className="w-10 h-10 rounded-full border border-gray-100 overflow-hidden bg-white flex-shrink-0 shadow-sm relative">
-                       {/* Using a regular img tag for external logo or Image with unoptimized */}
-                       <img 
-                          src={cabin.logo} 
-                          alt={`${cabin.airline} logo`} 
-                          className="w-full h-full object-contain p-1"
-                          onError={(e) => {
-                            // Fallback if logo fails to load
-                            e.currentTarget.src = "https://ui-avatars.com/api/?name=" + cabin.airline + "&background=random";
-                          }}
-                       />
+                      {/* Using a regular img tag for external logo or Image with unoptimized */}
+                      <img
+                        src={cabin.logo}
+                        alt={`${cabin.airline} logo`}
+                        className="w-full h-full object-contain p-1"
+                        onError={(e) => {
+                          // Fallback if logo fails to load
+                          e.currentTarget.src = "https://ui-avatars.com/api/?name=" + cabin.airline + "&background=random";
+                        }}
+                      />
                     </div>
-                    
+
                     {/* Text Details */}
                     <div className="flex flex-col">
                       <p className="text-[13px] font-bold text-[#0A2540]">{cabin.airline}</p>
@@ -142,7 +142,7 @@ export default function WorldBestCabins() {
                       <p className="text-[10px] text-text-secondary mt-1 font-medium">{cabin.classes}</p>
                     </div>
                   </div>
-                  
+
                   {/* Chevron Right */}
                   <div className="w-7 h-7 rounded-full flex items-center justify-center group-hover:bg-blue-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
@@ -162,8 +162,9 @@ export default function WorldBestCabins() {
         </div>
 
       </div>
-      
-      <style dangerouslySetInnerHTML={{__html: `
+
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .scrollbar-hide::-webkit-scrollbar {
             display: none;
         }

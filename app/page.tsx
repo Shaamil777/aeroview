@@ -5,6 +5,10 @@ import SeatMapPreview from "@/components/SeatMapPreview";
 import PopularAircraft from "@/components/Compare";
 import WorldBestCabins from "@/components/WorldBestCabins";
 import BeyondSeatMap from "@/components/BeyondSeatMap";
+import FAQ from "@/components/FAQ";
+import CTA from "@/components/CTA";
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
@@ -31,50 +35,20 @@ export default function Home() {
 
 
       {/* 7. About */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/2 w-full">
-            <div className="aspect-video bg-border-subtle rounded-xl flex items-center justify-center text-text-secondary">
-              About Us Image
-            </div>
-          </div>
-          <div className="md:w-1/2 w-full">
-            <h2 className="text-3xl font-bold text-heading mb-6">About AeroView</h2>
-            <p className="text-text-secondary mb-6 leading-relaxed">
-              We are dedicated to revolutionizing how you experience flight. Our platform connects you with the best airlines and aircraft to ensure your journey is as seamless as your destination.
-            </p>
-            <button className="px-6 py-3 bg-aviation text-navy font-medium rounded-lg hover:bg-aviation/90 transition-colors">
-              Read Our Story
-            </button>
-          </div>
+      <section id="about" className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-heading mb-6">About AeroView</h2>
+          <p className="text-text-secondary text-lg md:text-xl leading-relaxed">
+            AeroView was created to bring clarity and ease to the flying experience. By meticulously cataloging the world's most popular aircraft and cabin layouts, we provide the ultimate resource for travelers seeking their perfect flight. Whether you are searching for the most spacious business class seat or the best economy configuration for a long-haul journey, our comprehensive platform puts the knowledge you need right at your fingertips.
+          </p>
         </div>
       </section>
 
       {/* 8. FAQ */}
-      <section id="faq" className="bg-bg-soft py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-heading mb-10 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="bg-card border border-border-subtle rounded-lg p-6">
-                <h3 className="font-bold text-heading mb-2">Question {i}?</h3>
-                <p className="text-text-secondary text-sm">Detailed answer to the frequently asked question goes here.</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FAQ />
 
       {/* 9. CTA */}
-      <section id="cta" className="bg-aviation py-20 px-4 sm:px-6 lg:px-8 text-center text-navy">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6">Ready to take off?</h2>
-          <p className="text-xl mb-10 opacity-90">Join thousands of travelers who trust AeroView for their journey.</p>
-          <button className="px-8 py-4 bg-navy text-white font-bold rounded-lg hover:bg-navy/90 transition-colors shadow-lg">
-            Get Started Now
-          </button>
-        </div>
-      </section>
+      <CTA />
     </div>
   );
 }
