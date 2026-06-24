@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function FeaturedAirlineCard() {
   return (
     <div className="relative rounded-3xl overflow-hidden mb-8 h-[340px] flex items-center shadow-lg group cursor-pointer bg-navy">
-      {/* Background image */}
+      
       <div className="absolute inset-0 w-full h-full">
         <Image
           src="/images/emirates.jpg"
@@ -13,10 +13,9 @@ export default function FeaturedAirlineCard() {
           className="object-cover object-[center_right] md:object-[75%_center] transform group-hover:scale-105 transition-transform duration-700 opacity-90"
         />
       </div>
-      {/* Gradient Overlay */}
+      
       <div className="absolute inset-0 bg-gradient-to-r from-[#D32027] via-[#D32027]/80 lg:via-[#D32027]/50 to-transparent"></div>
 
-      {/* Content */}
       <div className="relative z-10 p-6 md:p-10 text-white max-w-2xl h-full flex flex-col justify-center">
         <div className="flex items-center gap-4 mb-4">
           <div className="w-14 h-14 bg-[#D32027] rounded-xl flex items-center justify-center shadow-md">
@@ -76,7 +75,6 @@ export default function FeaturedAirlineCard() {
         </button>
       </div>
 
-      {/* Bottom Right Tag */}
       <div className="absolute bottom-5 right-5 bg-black/40 backdrop-blur-md text-white py-1.5 px-4 rounded-full flex items-center gap-2 text-sm font-medium z-10 border border-white/20">
         <Image src="/icons/plane.png" width={14} height={14} alt="plane" className="invert" />
         Airbus A380

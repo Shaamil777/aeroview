@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-bg-soft text-navy py-12 md:py-16 mt-auto border-t border-border-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 mb-12">
-          {/* Brand & Description */}
+          
           <div className="md:col-span-5 lg:col-span-4">
             <Link href="/" className="inline-block mb-4">
               <span className="text-2xl font-bold text-navy tracking-tight">
@@ -17,7 +17,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Links */}
           <div className="md:col-span-7 lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8">
             <div>
               <h3 className="text-navy font-semibold mb-4 text-sm uppercase tracking-wider">Explore</h3>
@@ -49,7 +48,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="pt-8 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
             <p className="text-text-secondary text-sm mb-1">
@@ -59,8 +57,7 @@ export default function Footer() {
               Aircraft layouts and cabin information are provided for informational purposes and may vary by airline.
             </p>
           </div>
-          
-          {/* Social Icons */}
+
           <div className="flex space-x-5">
             <a href="#" className="text-text-secondary hover:text-navy transition-colors" aria-label="Twitter">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

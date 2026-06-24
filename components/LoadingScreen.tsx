@@ -8,12 +8,11 @@ export default function LoadingScreen() {
   const [isRendered, setIsRendered] = useState(true);
 
   useEffect(() => {
-    // Animation takes 2.5 seconds. We hide it after 2.8s
+
     const hideTimer = setTimeout(() => {
       setIsVisible(false);
     }, 2800);
 
-    // Unmount completely after fade out
     const removeTimer = setTimeout(() => {
       setIsRendered(false);
     }, 3300);
@@ -33,12 +32,11 @@ export default function LoadingScreen() {
       } overflow-hidden`}
     >
       <div className="flex items-center justify-center space-x-4">
-        {/* Minimal text */}
+        
         <span className="text-[11px] tracking-[0.4em] text-gray-400 uppercase font-medium">
           Loading
         </span>
 
-        {/* Floating Flight Icon */}
         <div className="relative animate-float">
           <Image
             src="/icons/flight.png"

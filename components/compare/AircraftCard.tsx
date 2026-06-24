@@ -21,7 +21,7 @@ export default function AircraftCard({ aircraft, isSelected, activeTab, onToggle
       }`}
       onClick={() => onToggle(aircraft)}
     >
-      {/* Selection State Indicator */}
+      
       <div className="absolute top-4 right-4 z-10">
         {isSelected ? (
           <div className="bg-aviation text-white rounded-full p-1 shadow-md transform scale-110 transition-transform">
@@ -40,7 +40,7 @@ export default function AircraftCard({ aircraft, isSelected, activeTab, onToggle
           alt={aircraft.name}
           className={`w-full h-full object-cover transition-transform duration-700 ${isSelected ? 'scale-105' : 'group-hover:scale-105'}`}
         />
-        {/* Contextual Badge */}
+        
         <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-bold text-navy shadow-sm flex items-center gap-1.5">
           {activeTab === 'Routes' ? (
             <>

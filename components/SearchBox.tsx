@@ -52,7 +52,6 @@ export default function SearchBox() {
         </div>
       </form>
 
-      {/* Popular Searches */}
       <div className="mt-6 flex flex-col md:flex-row items-start md:items-center gap-3 text-sm">
         <span className="text-white/60 font-medium">Popular searches:</span>
         <div className="flex flex-wrap gap-2">

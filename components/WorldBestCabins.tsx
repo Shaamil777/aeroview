@@ -7,7 +7,7 @@ import { Move, ChevronRight, ChevronLeft } from "lucide-react";
 const cabins = [
   {
     id: '1',
-    // Using local images to prevent Unsplash 403 errors
+
     image: '/images/boeing_787_aircraft.png',
     airline: 'Emirates',
     aircraft: 'Airbus A380-800',
@@ -65,11 +65,10 @@ export default function WorldBestCabins() {
         <div className="flex justify-between items-end mb-10">
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold text-[#0A2540]">
-              Step inside world's best cabins
+              Step inside world&apos;s best cabins
             </h2>
           </div>
 
-          {/* Navigation Buttons (Desktop) */}
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={() => scroll('left')}
@@ -88,7 +87,6 @@ export default function WorldBestCabins() {
           </div>
         </div>
 
-        {/* Carousel Container */}
         <div className="relative -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
           <div
             ref={scrollRef}
@@ -100,7 +98,7 @@ export default function WorldBestCabins() {
                 key={cabin.id}
                 className="min-w-[280px] md:min-w-[320px] lg:min-w-[340px] flex-shrink-0 snap-start bg-white rounded-3xl border border-border-subtle overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
               >
-                {/* Image Section */}
+                
                 <div className="relative h-40 md:h-48 w-full overflow-hidden">
                   <Image
                     src={cabin.image}
@@ -108,34 +106,31 @@ export default function WorldBestCabins() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  {/* Overlay Gradient */}
+                  
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
 
-                  {/* 360 Badge */}
                   <div className="absolute top-3 left-3 w-10 h-10 bg-black/60 backdrop-blur-md rounded-full flex flex-col items-center justify-center text-white border border-white/20 shadow-lg group-hover:scale-110 transition-transform">
                     <span className="text-[9px] font-bold leading-none mb-0.5 mt-1">360°</span>
                     <Move className="w-3.5 h-3.5" />
                   </div>
                 </div>
 
-                {/* Content Section */}
                 <div className="p-5 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    {/* Airline Logo */}
+                    
                     <div className="w-10 h-10 rounded-full border border-gray-100 overflow-hidden bg-white flex-shrink-0 shadow-sm relative">
-                      {/* Using a regular img tag for external logo or Image with unoptimized */}
+                      
                       <img
                         src={cabin.logo}
                         alt={`${cabin.airline} logo`}
                         className="w-full h-full object-contain p-1"
                         onError={(e) => {
-                          // Fallback if logo fails to load
+
                           e.currentTarget.src = "https://ui-avatars.com/api/?name=" + cabin.airline + "&background=random";
                         }}
                       />
                     </div>
 
-                    {/* Text Details */}
                     <div className="flex flex-col">
                       <p className="text-[13px] font-bold text-[#0A2540]">{cabin.airline}</p>
                       <p className="text-[13px] font-semibold text-[#0A2540] mt-0.5">{cabin.aircraft}</p>
@@ -143,7 +138,6 @@ export default function WorldBestCabins() {
                     </div>
                   </div>
 
-                  {/* Chevron Right */}
                   <div className="w-7 h-7 rounded-full flex items-center justify-center group-hover:bg-blue-50 transition-colors">
                     <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
                   </div>
@@ -153,7 +147,6 @@ export default function WorldBestCabins() {
           </div>
         </div>
 
-        {/* Dots (Simulated for visual match) */}
         <div className="flex justify-center items-center gap-2 mt-2">
           <div className="w-2 h-2 rounded-full bg-[#0A2540]"></div>
           <div className="w-2 h-2 rounded-full bg-gray-300"></div>

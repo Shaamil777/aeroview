@@ -62,7 +62,6 @@ export default function TrustSection() {
       ref={sectionRef}
       className="relative bg-bg-soft py-10 px-4 sm:px-6 lg:px-8 border-b border-border-subtle overflow-hidden shadow-inner"
     >
-     
 
       <div className="max-w-[85rem] mx-auto relative z-20 w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">

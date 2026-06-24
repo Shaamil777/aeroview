@@ -15,7 +15,6 @@ export default function PopularAirlines() {
     <section id="popular-airlines" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#F8FAFC] overflow-hidden">
       <div className="max-w-[85rem] mx-auto">
 
-        {/* Navigation / Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
           <div className="flex flex-wrap items-center gap-4 border-b border-border-subtle pb-4 w-full md:w-auto">
             <button
@@ -51,14 +50,12 @@ export default function PopularAirlines() {
           </div>
         </div>
 
-        {/* Carousel Wrapper */}
         <div className="relative">
           <div
             className="flex transition-transform duration-700 ease-in-out w-full"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
 
-            {/* -------------------- SLIDE 1: AIRLINES -------------------- */}
             <div className="min-w-full w-full pr-0 md:pr-8">
               <FeaturedAirlineCard />
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -69,7 +66,6 @@ export default function PopularAirlines() {
               </div>
             </div>
 
-            {/* -------------------- SLIDE 2: AIRCRAFT -------------------- */}
             <div className="min-w-full w-full pl-0 md:pl-8">
               <FeaturedAircraftCard />
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

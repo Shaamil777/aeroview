@@ -16,11 +16,9 @@ export default function Navbar() {
         setNavbarStyle('transparent');
         setIsVisible(true);
       } else {
-        if (currentScrollY > lastScrollY) {
-          // Scrolling down
+        if (currentScrollY > lastScrollY) {
           setIsVisible(false);
-        } else {
-          // Scrolling up
+        } else {
           setIsVisible(true);
           setNavbarStyle('solid');
         }

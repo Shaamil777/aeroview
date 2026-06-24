@@ -42,8 +42,7 @@ export default function FAQ() {
         </div>
 
         <div className="flex flex-col lg:flex-row bg-white rounded-3xl border border-border-subtle shadow-xl shadow-blue-900/5 overflow-hidden">
-          
-          {/* Left Side: Interactive Tabs */}
+
           <div className="lg:w-2/5 flex flex-col border-b lg:border-b-0 lg:border-r border-border-subtle bg-gray-50/50">
             {faqs.map((faq, i) => (
               <button
@@ -63,9 +62,8 @@ export default function FAQ() {
             ))}
           </div>
 
-          {/* Right Side: Answer Content */}
           <div className="lg:w-3/5 p-8 lg:p-16 flex flex-col justify-center bg-gradient-to-br from-[#F4F7FF] to-white relative overflow-hidden min-h-[400px]">
-            {/* Decorative Background Icon */}
+            
             <div className="absolute -top-10 -right-10 opacity-[0.03] pointer-events-none transition-transform duration-1000 ease-out" key={`bg-icon-${activeTab}`}>
               <Plane className="w-96 h-96 -rotate-45" />
             </div>

@@ -35,16 +35,14 @@ export default function CompareModal({ selectedAircraft, onClose }: CompareModal
 
         <div className="overflow-y-auto p-6 md:p-8 custom-scrollbar bg-white">
           <div className="grid grid-cols-[minmax(180px,220px)_repeat(auto-fit,minmax(280px,1fr))] gap-6">
-            
-            {/* Labels Column */}
+
             <div className="hidden md:flex flex-col gap-0 pt-[140px]">
-              {/* Category: General Information */}
+              
               <div className="h-10 flex items-end pb-2 font-bold text-navy text-xs uppercase tracking-wider border-b border-border-subtle mb-2">General Information</div>
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Manufacturer</div>
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Aircraft Family</div>
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Aircraft Type</div>
 
-              {/* Category: Cabin Information */}
               <div className="h-10 flex items-end pb-2 font-bold text-navy text-xs uppercase tracking-wider border-b border-border-subtle mb-2 mt-4">Cabin Information</div>
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Total Seats</div>
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Business Class Seats</div>
@@ -52,7 +50,6 @@ export default function CompareModal({ selectedAircraft, onClose }: CompareModal
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Economy Seats</div>
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Cabin Classes</div>
 
-              {/* Category: Comfort Information */}
               <div className="h-10 flex items-end pb-2 font-bold text-navy text-xs uppercase tracking-wider border-b border-border-subtle mb-2 mt-4">Comfort Information</div>
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Seat Width</div>
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Seat Pitch</div>
@@ -60,14 +57,12 @@ export default function CompareModal({ selectedAircraft, onClose }: CompareModal
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Window Alignment</div>
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Extra Legroom</div>
 
-              {/* Category: Layout Information */}
               <div className="h-10 flex items-end pb-2 font-bold text-navy text-xs uppercase tracking-wider border-b border-border-subtle mb-2 mt-4">Layout Information</div>
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Layout Variants</div>
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Airlines Operating</div>
               <div className="h-12 flex items-center text-sm font-medium text-text-secondary">Seat Map</div>
             </div>
 
-            {/* Data Columns */}
             <div className={`grid gap-6 flex-1`} style={{ gridTemplateColumns: `repeat(${selectedAircraft.length}, minmax(0, 1fr))` }}>
               {selectedAircraft.map(aircraft => {
                 const isBestComfort = hasMultiple && aircraft.comfortScore === bestComfortScore;
@@ -78,7 +73,7 @@ export default function CompareModal({ selectedAircraft, onClose }: CompareModal
 
                 return (
                 <div key={`modal-${aircraft.id}`} className="flex flex-col">
-                  {/* Header Card */}
+                  
                   <div className="bg-[#F8FAFC] rounded-2xl p-4 mb-0 border border-border-subtle text-center h-[140px] flex flex-col items-center justify-center relative overflow-hidden group">
                     <img 
                       src={aircraft.image} 
@@ -94,9 +89,8 @@ export default function CompareModal({ selectedAircraft, onClose }: CompareModal
                     </div>
                   </div>
 
-                  {/* Specs */}
                   <div className="flex flex-col gap-0 text-sm">
-                    {/* Category: General Information */}
+                    
                     <div className="h-10 flex items-end pb-2 font-bold text-navy text-xs uppercase tracking-wider border-b border-border-subtle mb-2">
                       <span className="md:hidden">General Information</span>
                     </div>
@@ -113,7 +107,6 @@ export default function CompareModal({ selectedAircraft, onClose }: CompareModal
                       <span className="font-semibold text-navy">{aircraft.aircraftType}</span>
                     </div>
 
-                    {/* Category: Cabin Information */}
                     <div className="h-10 flex items-end pb-2 font-bold text-navy text-xs uppercase tracking-wider border-b border-border-subtle mb-2 mt-4 md:mt-4 md:border-b">
                       <span className="md:hidden">Cabin Information</span>
                     </div>
@@ -138,7 +131,6 @@ export default function CompareModal({ selectedAircraft, onClose }: CompareModal
                       <span className="font-semibold text-navy">{aircraft.cabinClasses}</span>
                     </div>
 
-                    {/* Category: Comfort Information */}
                     <div className="h-10 flex items-end pb-2 font-bold text-navy text-xs uppercase tracking-wider border-b border-border-subtle mb-2 mt-4 md:mt-4 md:border-b">
                       <span className="md:hidden">Comfort Information</span>
                     </div>
@@ -183,7 +175,6 @@ export default function CompareModal({ selectedAircraft, onClose }: CompareModal
                       )}
                     </div>
 
-                    {/* Category: Layout Information */}
                     <div className="h-10 flex items-end pb-2 font-bold text-navy text-xs uppercase tracking-wider border-b border-border-subtle mb-2 mt-4 md:mt-4 md:border-b">
                       <span className="md:hidden">Layout Information</span>
                     </div>
@@ -210,9 +201,8 @@ export default function CompareModal({ selectedAircraft, onClose }: CompareModal
             </div>
           </div>
 
-          {/* Interactive Seat Map Comparison Placeholder */}
           <div className="mt-16 bg-gradient-to-r from-navy to-[#004bb8] rounded-3xl p-8 relative overflow-hidden shadow-xl">
-            {/* Decorative background elements */}
+            
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-aviation/20 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
             

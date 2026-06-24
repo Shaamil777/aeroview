@@ -18,7 +18,6 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Search Box */}
       <div className="relative w-full max-w-5xl px-4 sm:px-6 lg:px-8 z-20">
         <SearchBox />
       </div>

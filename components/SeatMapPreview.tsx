@@ -6,8 +6,7 @@ export default function SeatMapPreview() {
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#F8FAFC]">
       <div className="max-w-[85rem] mx-auto bg-[#F4F7FB] rounded-3xl p-8 md:p-12">
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          
-          {/* Left Column - Text and Legend */}
+
           <div className="lg:w-[18%] w-full">
             <h4 className="text-blue-600 font-bold text-xs tracking-wider uppercase mb-2">Explore Cabin Layouts</h4>
             <h2 className="text-2xl font-bold text-navy mb-3">Interactive Seat Map Preview</h2>
@@ -16,7 +15,6 @@ export default function SeatMapPreview() {
             </p>
           </div>
 
-          {/* Middle Column - Image & Legend */}
           <div className="lg:w-[62%] w-full flex flex-col items-center relative">
             <div className="flex justify-center w-full">
               <Image 
@@ -62,7 +60,6 @@ export default function SeatMapPreview() {
             </div>
           </div>
 
-          {/* Right Column - Card */}
           <div className="lg:w-[20%] w-full">
             <AircraftSpecCard />
           </div>

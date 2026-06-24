@@ -57,7 +57,6 @@ export default function Compare() {
           </p>
         </div>
 
-        {/* Tabs */}
         <div className="flex justify-center mb-8">
           <div className="inline-flex bg-white border border-border-subtle p-1.5 rounded-full shadow-sm">
             {tabs.map(tab => (
@@ -76,7 +75,6 @@ export default function Compare() {
           </div>
         </div>
 
-        {/* Filters */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {filters[activeTab].map(filter => (
             <button
@@ -93,7 +91,6 @@ export default function Compare() {
           ))}
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredData.map(aircraft => (
             <AircraftCard
