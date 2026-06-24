@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import TrustSection from "@/components/TrustSection";
 import PopularAirlines from "@/components/PopularAirlines";
 import SeatMapPreview from "@/components/SeatMapPreview";
+import PopularAircraft from "@/components/PopularAircraft";
 
 export default function Home() {
   return (
@@ -18,22 +19,7 @@ export default function Home() {
       <SeatMapPreview />
 
       {/* 4. Popular Aircraft */}
-      <section id="popular-aircraft" className="bg-bg-soft py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-heading mb-10 text-center">Popular Aircraft</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-card border border-border-subtle rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-48 bg-border-subtle flex items-center justify-center text-text-secondary">Image Placeholder</div>
-                <div className="p-6">
-                  <h3 className="font-bold text-lg mb-2 text-heading">Aircraft Model {i}</h3>
-                  <p className="text-text-secondary text-sm">Brief description of the aircraft specifications and comfort features.</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PopularAircraft />
 
       {/* 5. Why Choose Us / Features */}
       <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
