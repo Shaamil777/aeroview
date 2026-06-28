@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Aircraft } from '@/types/aircraft';
 import { AIRCRAFT_DATA } from '@/data/aircraft';
 import AircraftCard from '@/components/compare/AircraftCard';

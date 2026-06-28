@@ -18,7 +18,6 @@ export default function FadeIn({ children, delay = 0, className = "", direction 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Check if page just loaded to wait out the LoadingScreen (~2800ms)
           const timeSinceLoad = window.performance.now();
           const loadingScreenDuration = 2800;
           

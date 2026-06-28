@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function About() {
   return (
     <section id="about" className="pt-14 sm:pt-24 pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8 bg-white">

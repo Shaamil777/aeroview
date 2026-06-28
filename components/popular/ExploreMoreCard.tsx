@@ -1,5 +1,3 @@
-import React from 'react';
-
 type ExploreMoreCardProps = {
   title: string;
   subtitle: string;

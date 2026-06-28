@@ -70,7 +70,7 @@ export default function FAQ() {
             
             <div 
               className="relative z-10 max-w-xl animate-in fade-in slide-in-from-right-4 duration-500"
-              key={`content-${activeTab}`} // This key forces re-render for animation on tab change
+              key={`content-${activeTab}`}
             >
               <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-md shadow-blue-900/5">
                 <Plane className="w-8 h-8 text-aviation rotate-45" />

@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React from 'react';
 import { X, ArrowRightLeft } from 'lucide-react';
 import { Aircraft } from '@/types/aircraft';
 

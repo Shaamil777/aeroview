@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { airlines, aircraftList } from '@/data/popular';
 import FeaturedAirlineCard from '@/components/popular/FeaturedAirlineCard';
 import AirlineCard from '@/components/popular/AirlineCard';

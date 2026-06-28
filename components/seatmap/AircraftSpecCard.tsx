@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function AircraftSpecCard() {
   return (
     <div className="bg-white rounded-2xl shadow-sm p-4 border border-gray-100">
